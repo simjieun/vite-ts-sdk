@@ -4,9 +4,9 @@ class TalkButton {
     constructor() {
         this.renderElement = document.createElement('button');
         this.renderElement.classList.add('talk');
-        this.renderElement.innerText = "Encar Talk";
+        this.renderElement.innerText = "Talk";
         this.renderElement.onclick = () => {
-            alert("엔카톡입니다");
+            alert("톡입니다");
         }
     }
 
