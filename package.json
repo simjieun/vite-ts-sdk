@@ -19,7 +19,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint -c ~/eslint.config.js . --ext .ts"
+    "lint": "ESLINT_USE_FLAT_CONFIG=true eslint --config eslint.config.js *.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.4.0",

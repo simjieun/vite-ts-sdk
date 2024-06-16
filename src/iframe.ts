@@ -16,6 +16,7 @@ class IFrame {
 		iframe.src = 'https://m.encar.com';
 		iframe.width = '100%';
 		iframe.height = '100%';
+		this.hide();
 		this.iframeDiv.appendChild(iframe);
 	}
 

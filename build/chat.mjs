@@ -1,12 +1,12 @@
 var a = Object.defineProperty;
 var l = (t, e, i) => e in t ? a(t, e, { enumerable: !0, configurable: !0, writable: !0, value: i }) : t[e] = i;
 var s = (t, e, i) => l(t, typeof e != "symbol" ? e + "" : e, i);
-class m {
+class h {
   constructor() {
     s(this, "iframeDiv");
     this.iframeDiv = document.createElement("div"), this.iframeDiv.style.position = "fixed", this.iframeDiv.style.bottom = "96px", this.iframeDiv.style.right = "30px", this.iframeDiv.style.width = "390px", this.iframeDiv.style.minHeight = "200px", this.iframeDiv.style.maxHeight = "690px", this.iframeDiv.style.overflow = "hidden", this.iframeDiv.style.borderRadius = "30px";
     const e = document.createElement("iframe");
-    e.setAttribute("id", "talk_iframe"), e.src = "https://m.encar.com", e.width = "100%", e.height = "100%", this.iframeDiv.appendChild(e);
+    e.setAttribute("id", "talk_iframe"), e.src = "https://m.encar.com", e.width = "100%", e.height = "100%", this.hide(), this.iframeDiv.appendChild(e);
   }
   create() {
     return document.body.appendChild(this.iframeDiv), this.iframeDiv;
@@ -35,7 +35,7 @@ const r = class r {
     this.renderElement.addEventListener("click", this.handleClick);
   }
   init() {
-    const e = new m();
+    const e = new h();
     this.iframeElement = e.create(), document.body.appendChild(this.renderElement);
   }
 };
@@ -50,5 +50,5 @@ s(r, "BUTTON_STYLES", {
   backgroundColor: "#efefef"
 });
 let n = r;
-const h = new n();
-h.init();
+const m = new n();
+m.init();
