@@ -1,16 +1,16 @@
 class Iframe {
 	private iframeDiv: HTMLDivElement;
-	private static readonly STYLES:Record<string, string> = {
+	private static readonly STYLES: Record<string, string> = {
 		position: 'fixed',
 		bottom: '96px',
 		right: '30px',
 		width: '390px',
 		minHeight: '200px',
-		maxHeight:'690px',
-		overflow:"hidden",
-		borderRadius:"30px",
-		visibility:"hidden",
-	}
+		maxHeight: '690px',
+		overflow: 'hidden',
+		borderRadius: '30px',
+		visibility: 'hidden',
+	};
 	// 주석을 달아보자
 	constructor() {
 		this.iframeDiv = document.createElement('div');

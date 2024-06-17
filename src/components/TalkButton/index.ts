@@ -1,5 +1,5 @@
 import Iframe from '@components/Iframe';
-import Logo from "@/assets/typescript.svg";
+import Logo from '@/assets/typescript.svg';
 
 class TalkButton {
 	private element: HTMLButtonElement;
@@ -19,10 +19,10 @@ class TalkButton {
 
 	constructor() {
 		this.element = document.createElement('button');
-		const image = document.createElement("img")
+		const image = document.createElement('img');
 		image.src = Logo;
-		image.alt = "talk logo";
-		image.style.borderRadius = "100px";
+		image.alt = 'talk logo';
+		image.style.borderRadius = '100px';
 		this.element.appendChild(image);
 		this.applyStyles();
 		this.addEventListeners();
