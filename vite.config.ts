@@ -33,7 +33,7 @@ export default defineConfig({
 		minify: 'terser',
 		lib: {
 			entry: path.resolve(__dirname, 'src/index.ts'),
-			name: getPackageNameCamelCase(),
+			name: "CHAT",
 			formats,
 			fileName: (format) => fileName[format as ModuleFormat],
 		},
@@ -59,6 +59,15 @@ export default defineConfig({
 					],
 				}),
 			],
+			output: {
+                footer: `
+                  if (globalThis.CHAT) {
+                    for (const key of Object.keys(globalThis.CHAT)) {
+                      globalThis[key] = globalThis.CHAT[key]
+                    }
+                  }
+                `,
+            }
 		},
 	},
 	resolve: {
